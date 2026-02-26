@@ -100,8 +100,8 @@ Keep your Mac awake while server is running
 </td>
 <td align="center" width="50%">
 <b>Mac Server</b><br><br>
-<a href="https://github.com/MJYKIM99/claude-remote/releases/download/v1.3/ClaudeRemote-Mac-1.3.dmg">
-<img src="https://img.shields.io/badge/Download-DMG%20v1.3-success.svg?style=for-the-badge&logo=apple" width="180" alt="Download DMG">
+<a href="https://github.com/MJYKIM99/claude-remote/releases/download/v1.4/ClaudeRemote-Mac-1.4.dmg">
+<img src="https://img.shields.io/badge/Download-DMG%20v1.4-success.svg?style=for-the-badge&logo=apple" width="180" alt="Download DMG">
 </a>
 <p><a href="https://github.com/MJYKIM99/claude-remote/releases">Releases</a></p>
 </td>
