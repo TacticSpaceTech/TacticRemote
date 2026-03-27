@@ -1,24 +1,32 @@
 <div align="center">
 
-<img src="assets/icon.png" width="192" alt="Claude Remote">
+<img src="assets/icon.png" width="192" alt="Tactic Remote">
 
-# Claude Remote
+# Tactic Remote
 
 ### Control Claude Code from your iPhone or iPad
 
-[![iOS](https://img.shields.io/badge/iOS-17.0%2B-blue.svg?style=flat&logo=apple&logoColor=white)](https://testflight.apple.com/join/DvR54qeU)
-[![macOS](https://img.shields.io/badge/macOS-14.0%2B-green.svg?style=flat&logo=apple&logoColor=white)](https://github.com/MJYKIM99/claude-remote/releases)
-[![TestFlight](https://img.shields.io/badge/TestFlight-Beta-purple.svg?style=flat&logo=testflight&logoColor=white)](https://testflight.apple.com/join/DvR54qeU)
+*Formerly known as **Claude Remote** — same app, new name.*
 
-[Website](https://clauderc.com) • [Documentation](https://clauderc.com) • [Support](https://github.com/MJYKIM99/claude-remote/issues)
+[![iOS](https://img.shields.io/badge/iOS-17.0%2B-blue.svg?style=flat&logo=apple&logoColor=white)](https://apps.apple.com/app/tactic-remote/id6743597533)
+[![macOS](https://img.shields.io/badge/macOS-14.0%2B-green.svg?style=flat&logo=apple&logoColor=white)](https://github.com/TacticSpaceTech/TacticRemote/releases)
+[![App Store](https://img.shields.io/badge/App%20Store-Available-purple.svg?style=flat&logo=apple&logoColor=white)](https://apps.apple.com/app/tactic-remote/id6743597533)
+
+[Website](https://tacticremote.com) • [Documentation](https://tacticremote.com/docs) • [Support](https://github.com/TacticSpaceTech/TacticRemote/issues)
 
 </div>
 
 ---
 
+> **Renamed:** Claude Remote is now **Tactic Remote**, under the [TacticSpaceTech](https://github.com/TacticSpaceTech) organization. Old links (`MJYKIM99/claude-remote`) redirect here automatically. All your data, sessions, and settings remain compatible.
+
+> **Coming soon:** Official stable release with multi-platform support — **macOS** / **Windows** / **Linux** server apps. Stay tuned at [tacticremote.com](https://tacticremote.com).
+
+---
+
 ## Overview
 
-Claude Remote brings the power of [Claude Code](https://claude.ai/code) to your iPhone or iPad. Interact with your coding sessions from anywhere — whether you're on the couch, in a meeting, or away from your desk.
+Tactic Remote brings the power of [Claude Code](https://claude.ai/code) to your iPhone or iPad. Interact with your coding sessions from anywhere — whether you're on the couch, in a meeting, or away from your desk.
 
 Perfect for reviewing code, monitoring long-running tasks, or quick iterations without being tied to your Mac.
 
@@ -64,7 +72,7 @@ Keep your Mac awake while server is running
 │   ┌─────────────────┐              WebSocket              ┌─────────────────┐ │
 │   │   iOS Device    │                                │   Mac Server    │ │
 │   │                 │   ◄───────────────────────────► │                 │ │
-│   │  Claude Remote  │      ws://local or wss://         │  Node.js + tmux │ │
+│   │  Tactic Remote  │      ws://local or wss://         │  Node.js + tmux │ │
 │   │      App        │                                   │                 │ │
 │   └─────────────────┘                                   └────────┬────────┘ │
 │                                                                  │           │
@@ -93,17 +101,16 @@ Keep your Mac awake while server is running
 <tr>
 <td align="center" width="50%">
 <b>iOS App</b><br><br>
-<a href="https://testflight.apple.com/join/DvR54qeU">
+<a href="https://apps.apple.com/app/tactic-remote/id6743597533">
 <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" width="180" alt="Download on App Store">
 </a>
-<p><a href="https://testflight.apple.com/join/DvR54qeU">Join TestFlight Beta</a></p>
 </td>
 <td align="center" width="50%">
-<b>Mac Server</b><br><br>
-<a href="https://github.com/MJYKIM99/claude-remote/releases/download/v1.5/ClaudeRemote-Mac-1.5.dmg">
-<img src="https://img.shields.io/badge/Download-DMG%20v1.5-success.svg?style=for-the-badge&logo=apple" width="180" alt="Download DMG">
+<b>Mac App</b><br><br>
+<a href="https://github.com/TacticSpaceTech/TacticRemote/releases">
+<img src="https://img.shields.io/badge/Download-DMG-success.svg?style=for-the-badge&logo=apple" width="180" alt="Download DMG">
 </a>
-<p><a href="https://github.com/MJYKIM99/claude-remote/releases">Releases</a></p>
+<p><a href="https://github.com/TacticSpaceTech/TacticRemote/releases">Releases</a></p>
 </td>
 </tr>
 </table>
@@ -128,11 +135,11 @@ Keep your Mac awake while server is running
 
 ### Step 1: Install the Mac App
 
-Download the DMG from [Releases](https://github.com/MJYKIM99/claude-remote/releases), open it, and drag **Claude Remote** to your Applications folder.
+Download the DMG from [Releases](https://github.com/TacticSpaceTech/TacticRemote/releases), open it, and drag **Tactic Remote** to your Applications folder.
 
 ### Step 2: Launch
 
-Open Claude Remote from Applications. You'll see a menu bar icon.
+Open Tactic Remote from Applications. You'll see a menu bar icon.
 
 ### Step 3: Setup Dependencies
 
@@ -147,7 +154,7 @@ Click **"Start Server"** in the menu. The server will:
 
 ### Step 5: Connect from iOS
 
-1. Open Claude Remote on your iOS device
+1. Open Tactic Remote on your iOS device
 2. Enter your Mac's IP address (shown in the Mac app)
 3. Tap **"Connect"**
 
@@ -218,7 +225,7 @@ Receive notifications when Claude completes tasks.
 
 ### Setup
 
-1. Enable notifications in iOS Settings for Claude Remote
+1. Enable notifications in iOS Settings for Tactic Remote
 2. Configure Claude Code hooks to send events to the server:
 
 ```bash
@@ -289,7 +296,7 @@ Public access uses Cloudflare's secure tunnel with TLS encryption — no open po
 
 ## Documentation
 
-Visit [clauderc.com](https://clauderc.com) for:
+Visit [tacticremote.com](https://tacticremote.com) for:
 - Visual setup guides
 - Advanced configuration
 - Troubleshooting tips
@@ -305,14 +312,14 @@ This software is proprietary. See [LICENSE](LICENSE) for details.
 
 ## Support
 
-- [Report Issues](https://github.com/MJYKIM99/claude-remote/issues)
-- [Discussions](https://github.com/MJYKIM99/claude-remote/discussions)
-- [Website](https://clauderc.com)
+- [Report Issues](https://github.com/TacticSpaceTech/TacticRemote/issues)
+- [Discussions](https://github.com/TacticSpaceTech/TacticRemote/discussions)
+- [Website](https://tacticremote.com)
 
 ---
 
 <div align="center">
 
-Copyright 2026 [TacticSpace Tech](https://tacticspacetech.com/). All rights reserved.
+Copyright 2025-2026 [TacticSpace Tech](https://tacticspacetech.com/). All rights reserved.
 
 </div>

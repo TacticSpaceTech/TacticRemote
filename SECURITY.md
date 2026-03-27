@@ -17,7 +17,7 @@ If you discover a security vulnerability, please report it responsibly:
 
 ## Security Features
 
-Claude Remote includes several security features:
+Tactic Remote includes several security features:
 
 - **API Key Authentication** - Optional authentication for server access
 - **Path Restrictions** - File operations limited to allowed directories
@@ -26,7 +26,7 @@ Claude Remote includes several security features:
 
 ## Best Practices
 
-When using Claude Remote:
+When using Tactic Remote:
 
 1. **Use API Key** - Enable authentication in production
 2. **Restrict Paths** - Limit file access to project directories only
