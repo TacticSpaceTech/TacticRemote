@@ -6,11 +6,10 @@
 
 ### Control Claude Code from your iPhone or iPad
 
-*Formerly known as **Claude Remote** — same app, new name.*
-
-[![iOS](https://img.shields.io/badge/iOS-17.0%2B-blue.svg?style=flat&logo=apple&logoColor=white)](https://apps.apple.com/app/tactic-remote/id6743597533)
+[![iOS](https://img.shields.io/badge/iOS-17.0%2B-blue.svg?style=flat&logo=apple&logoColor=white)](https://apps.apple.com/us/app/tactic-remote-ai-coding/id6758008464)
 [![macOS](https://img.shields.io/badge/macOS-14.0%2B-green.svg?style=flat&logo=apple&logoColor=white)](https://github.com/TacticSpaceTech/TacticRemote/releases)
-[![App Store](https://img.shields.io/badge/App%20Store-Available-purple.svg?style=flat&logo=apple&logoColor=white)](https://apps.apple.com/app/tactic-remote/id6743597533)
+[![npm](https://img.shields.io/badge/npx-tacticremote-cb3837.svg?style=flat&logo=npm&logoColor=white)](https://www.npmjs.com/package/tacticremote)
+[![App Store](https://img.shields.io/badge/App%20Store-Available-purple.svg?style=flat&logo=apple&logoColor=white)](https://apps.apple.com/us/app/tactic-remote-ai-coding/id6758008464)
 
 [Website](https://tacticremote.com) • [Documentation](https://tacticremote.com/docs) • [Support](https://github.com/TacticSpaceTech/TacticRemote/issues)
 
@@ -18,9 +17,7 @@
 
 ---
 
-> **Renamed:** Claude Remote is now **Tactic Remote**, under the [TacticSpaceTech](https://github.com/TacticSpaceTech) organization. Old links (`MJYKIM99/claude-remote`) redirect here automatically. All your data, sessions, and settings remain compatible.
-
-> **Coming soon:** Official stable release with multi-platform support — **macOS** / **Windows** / **Linux** server apps. Stay tuned at [tacticremote.com](https://tacticremote.com).
+> **Now on the App Store worldwide.** v1.6 is our biggest release — Chat Mode, iPad optimization, App Lock, Cloud STT, file uploads, Git workspace, and much more. Mainland China will follow once regulatory approval is complete.
 
 ---
 
@@ -36,11 +33,26 @@ Perfect for reviewing code, monitoring long-running tasks, or quick iterations w
 
 <div align="center">
 
-### **iOS Terminal Interface**
-Full terminal experience with ANSI color support and real-time output streaming
+### **Chat Mode**
+Dedicated conversation interface with side panels for interacting with Claude
 
-### **Quick Actions**
-On-screen buttons for Enter, Esc, Tab, Arrow keys, and Ctrl+C
+### **iOS Terminal Interface**
+Full terminal with ANSI color support, real-time streaming, search, and keyboard submit
+
+### **iPad-Optimized Layout**
+Native split-view with hardware keyboard shortcuts
+
+### **App Lock**
+Protect sessions with Face ID or Touch ID
+
+### **Git Workspace Panel**
+Live git status, file tree browsing, and branch info
+
+### **Cloud Speech-to-Text**
+Dictate prompts in 25+ languages
+
+### **File Uploads**
+Send files from iOS to the remote server
 
 ### **Multi-Session Management**
 Create, switch, and delete multiple tmux sessions simultaneously
@@ -49,16 +61,16 @@ Create, switch, and delete multiple tmux sessions simultaneously
 Browse your Mac's file system and select project directories from iOS
 
 ### **Local & Remote Access**
-Connect via WiFi or Cloudflare tunnel from anywhere in the world
+Connect via WiFi or Cloudflare tunnel — with automatic fallback switching
 
 ### **Push Notifications**
 Get notified when Claude completes tasks or sends hook events
 
-### **Persistent Sessions**
-Reconnect anytime — your tmux sessions keep running in the background
+### **Live Activity & Widgets**
+Real-time Claude status on Lock Screen, Dynamic Island, and Home Screen widgets
 
-### **Sleep Prevention**
-Keep your Mac awake while server is running
+### **Pro Subscriptions**
+Free trial included — unlock all features with monthly or yearly plans
 
 </div>
 
@@ -67,31 +79,74 @@ Keep your Mac awake while server is running
 ## How It Works
 
 ```
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                                                                              │
-│   ┌─────────────────┐              WebSocket              ┌─────────────────┐ │
-│   │   iOS Device    │                                │   Mac Server    │ │
-│   │                 │   ◄───────────────────────────► │                 │ │
-│   │  Tactic Remote  │      ws://local or wss://         │  Node.js + tmux │ │
-│   │      App        │                                   │                 │ │
-│   └─────────────────┘                                   └────────┬────────┘ │
-│                                                                  │           │
-│                                                                  ▼           │
-│                                                         ┌─────────────────┐ │
-│                                                         │  Claude Code    │ │
-│                                                         │     CLI         │ │
-│                                                         └─────────────────┘ │
-│                                                                              │
-└─────────────────────────────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────────────┐
+│                                                                          │
+│   ┌─────────────────┐            WebSocket            ┌─────────────────┐│
+│   │   iOS Device    │                                 │   Mac / Linux   ││
+│   │                 │  ◄─────────────────────────►    │                 ││
+│   │  Tactic Remote  │    ws://local or wss://         │  Server (Node)  ││
+│   │      App        │                                 │                 ││
+│   └─────────────────┘                                 └────────┬────────┘│
+│                                                                │         │
+│                                                                ▼         │
+│                                                       ┌─────────────────┐│
+│                                                       │  Claude Code    ││
+│                                                       │     CLI         ││
+│                                                       └─────────────────┘│
+│                                                                          │
+└──────────────────────────────────────────────────────────────────────────┘
 ```
 
-**Three components working together:**
+**Three ways to run the server:**
 
-| Component | Platform | Role |
-|-----------|----------|------|
-| **iOS App** | iPhone/iPad | Remote terminal interface |
-| **Mac App** | macOS 14+ | Menu bar server controller |
-| **MacServer** | Node.js | Bridges iOS and Claude Code via tmux |
+| Method | Platform | Command |
+|--------|----------|---------|
+| **npx** | Mac / Linux | `npx tacticremote` |
+| **Homebrew** | Mac | `brew install TacticSpaceTech/tap/tacticremote` |
+| **Mac App** | macOS 14+ | Menu bar GUI with one-click start |
+
+---
+
+## Quick Start
+
+The fastest way to get started — one command, no install:
+
+```bash
+npx tacticremote
+```
+
+Scan the QR code with the Tactic Remote iOS app and you're connected.
+
+### Options
+
+```
+npx tacticremote [options]
+
+  -p, --port <n>      Port to listen on          (default: 8765)
+  --path <dir>        Allowed base directory      (default: $HOME)
+  --api-key <key>     Require authentication key
+  --tunnel            Enable Cloudflare tunnel for remote access
+  --no-qr             Don't show QR code
+  -h, --help          Show this help
+```
+
+### Alternative: Mac Menu Bar App
+
+If you prefer a graphical interface:
+
+1. **Download** the DMG from [Releases](https://github.com/TacticSpaceTech/TacticRemote/releases)
+2. **Install** — open the DMG and drag **Tactic Remote** to Applications
+3. **Launch** — open from Applications, a menu bar icon will appear
+4. **Setup** — the app will auto-install dependencies (Homebrew, Node.js, tmux) if needed
+5. **Start Server** — click the menu bar icon → **Start Server**
+6. **Connect** — open Tactic Remote on your iPhone, scan the QR code or enter the IP shown in the menu bar
+
+The Mac app also provides:
+- One-click Cloudflare tunnel for remote access
+- Live client count and session monitoring
+- Copy server URL / tunnel address / API key from the menu
+- Language switcher (8 languages)
+- Auto-start on login
 
 ---
 
@@ -99,18 +154,24 @@ Keep your Mac awake while server is running
 
 <table align="center">
 <tr>
-<td align="center" width="50%">
-<b>iOS App</b><br><br>
-<a href="https://apps.apple.com/app/tactic-remote/id6743597533">
-<img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" width="180" alt="Download on App Store">
+<td align="center" width="33%">
+<b>iOS App</b><br>
+<i>iPhone / iPad</i><br><br>
+<a href="https://apps.apple.com/us/app/tactic-remote-ai-coding/id6758008464">
+<img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" width="160" alt="Download on App Store">
 </a>
 </td>
-<td align="center" width="50%">
-<b>Mac App</b><br><br>
+<td align="center" width="33%">
+<b>Mac App</b><br>
+<i>macOS 14+</i><br><br>
 <a href="https://github.com/TacticSpaceTech/TacticRemote/releases">
-<img src="https://img.shields.io/badge/Download-DMG-success.svg?style=for-the-badge&logo=apple" width="180" alt="Download DMG">
+<img src="https://img.shields.io/badge/Download-DMG-success.svg?style=for-the-badge&logo=apple" width="160" alt="Download DMG">
 </a>
-<p><a href="https://github.com/TacticSpaceTech/TacticRemote/releases">Releases</a></p>
+</td>
+<td align="center" width="33%">
+<b>CLI</b><br>
+<i>Mac / Linux</i><br><br>
+<code>npx tacticremote</code>
 </td>
 </tr>
 </table>
@@ -121,49 +182,11 @@ Keep your Mac awake while server is running
 
 | Platform | Minimum Version | Notes |
 |----------|----------------|-------|
-| **macOS** | 14.0 Sonoma | Required for Mac app |
 | **iOS** | 17.0 | iPhone or iPad |
-| **Node.js** | 16.0+ | Auto-installed by Mac app |
-| **tmux** | Latest | Auto-installed by Mac app |
-| **Claude Code CLI** | Latest | Install from claude.ai/code |
-
-> The Mac app will automatically guide you through installing any missing dependencies.
-
----
-
-## Quick Start
-
-### Step 1: Install the Mac App
-
-Download the DMG from [Releases](https://github.com/TacticSpaceTech/TacticRemote/releases), open it, and drag **Tactic Remote** to your Applications folder.
-
-### Step 2: Launch
-
-Open Tactic Remote from Applications. You'll see a menu bar icon.
-
-### Step 3: Setup Dependencies
-
-If prompted, allow the app to install dependencies (Homebrew, Node.js, tmux).
-
-### Step 4: Start Server
-
-Click **"Start Server"** in the menu. The server will:
-- Start on port `8765`
-- Display your Mac's local IP address
-- Optionally create a Cloudflare tunnel for public access
-
-### Step 5: Connect from iOS
-
-1. Open Tactic Remote on your iOS device
-2. Enter your Mac's IP address (shown in the Mac app)
-3. Tap **"Connect"**
-
-### Step 6: Start Coding
-
-1. Tap **"Sessions"** → **"Browse & Select Project"**
-2. Navigate to your project folder
-3. Tap **"Create & Start Claude"**
-4. Start coding from your iPhone!
+| **macOS** | 14.0 Sonoma | For Mac app or CLI |
+| **Node.js** | 16.0+ | Required for CLI; auto-installed by Mac app |
+| **tmux** | Latest | Auto-installed by Mac app or Homebrew |
+| **Claude Code CLI** | Latest | Install from [claude.ai/code](https://claude.ai/code) |
 
 ---
 
@@ -181,67 +204,13 @@ Ensure your iOS device and Mac are on the same WiFi network.
 
 ### Public Access (Cloudflare Tunnel)
 
-Connect from anywhere using a secure tunnel.
+Connect from anywhere using a secure tunnel — no open ports, no configuration:
 
 ```bash
-# Install Cloudflare CLI
-brew install cloudflared
+npx tacticremote --tunnel
 ```
 
-Then in the Mac app:
-1. Enable **"Public Access"**
-2. The app generates a `wss://` URL
-3. Use this URL in the iOS app
-
----
-
-## Session Management
-
-| Action | How |
-|--------|-----|
-| **Create** | Sessions → Browse & Select Project → Choose folder → Create & Start Claude |
-| **Switch** | Tap any session name in the sessions list |
-| **Delete** | Swipe left on a session or tap the trash icon |
-
-Sessions persist even if you close the iOS app. Reconnect anytime to resume.
-
----
-
-## Quick Actions Reference
-
-| Button | Action | Use Case |
-|--------|--------|----------|
-| `Enter` | Send newline | Submit commands |
-| `Esc` | Escape key | Exit modes, cancel |
-| `Tab` | Tab completion | Auto-complete paths/commands |
-| `↑↓←→` | Arrow keys | Navigate history, edit input |
-| `Ctrl+C` | Interrupt | Stop running commands |
-
----
-
-## Push Notifications
-
-Receive notifications when Claude completes tasks.
-
-### Setup
-
-1. Enable notifications in iOS Settings for Tactic Remote
-2. Configure Claude Code hooks to send events to the server:
-
-```bash
-# Example: Add to your Claude Code hooks
-curl -X POST http://localhost:8765/hook \
-  -H "Content-Type: application/json" \
-  -d '{"event":"Stop","project":"MyProject"}'
-```
-
-### Supported Events
-
-| Event | Description |
-|-------|-------------|
-| `Start` | Session started |
-| `Stop` | Session stopped |
-| `Notification` | Custom notification |
+The server generates a `wss://` URL automatically. Use this URL in the iOS app.
 
 ---
 
@@ -249,10 +218,8 @@ curl -X POST http://localhost:8765/hook \
 
 ### API Key Authentication (Optional)
 
-Add authentication to protect your server:
-
 ```bash
-export CLAUDE_REMOTE_API_KEY="your-secure-key"
+npx tacticremote --api-key "your-secure-key"
 ```
 
 Then enter the same key in iOS app settings.
@@ -262,12 +229,12 @@ Then enter the same key in iOS app settings.
 File operations are restricted to your home directory by default. Customize:
 
 ```bash
-export CLAUDE_REMOTE_ALLOWED_PATH="/Users/yourname/Projects"
+npx tacticremote --path "/Users/yourname/Projects"
 ```
 
 ### Cloudflare Tunnel
 
-Public access uses Cloudflare's secure tunnel with TLS encryption — no open ports on your Mac.
+Public access uses Cloudflare's secure tunnel with TLS encryption — no open ports on your machine.
 
 ---
 
@@ -282,7 +249,7 @@ Public access uses Cloudflare's secure tunnel with TLS encryption — no open po
 ### Connection drops frequently
 
 - Check WiFi stability
-- Server heartbeat: 45 seconds with 2-miss tolerance
+- The app supports automatic fallback between LAN and tunnel connections
 - iOS app auto-reconnects up to 5 times
 
 ### Claude not starting
@@ -290,7 +257,6 @@ Public access uses Cloudflare's secure tunnel with TLS encryption — no open po
 - Ensure Claude Code CLI is installed: `claude --version`
 - Check tmux is installed: `tmux -V`
 - Verify the working directory exists
-- Check server logs in the Mac app
 
 ---
 
