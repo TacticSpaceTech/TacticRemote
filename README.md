@@ -17,7 +17,7 @@
 
 ---
 
-> **Now on the App Store worldwide.** v1.6.1 — security hardening, crash protection, and thread safety fixes on top of v1.6 (Chat Mode, iPad optimization, App Lock, Cloud STT, file uploads, Git workspace). Mainland China will follow once regulatory approval is complete.
+> **Now on the App Store worldwide.** v1.6.5 — Plan mode, prompt queue, steer, APNs push notifications, and terminal session isolation. Mainland China will follow once regulatory approval is complete.
 
 ---
 
