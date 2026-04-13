@@ -17,7 +17,7 @@
 
 ---
 
-> **Now on the App Store worldwide.** v1.6.5 — Plan mode, prompt queue, steer, APNs push notifications, and terminal session isolation. Mainland China will follow once regulatory approval is complete.
+> **Now on the App Store worldwide.** v1.6.6 — Session-aware notifications, cold-start deep links, stronger push delivery, and Live Activity cleanup improvements. Mainland China will follow once regulatory approval is complete.
 
 ---
 
