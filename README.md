@@ -4,7 +4,7 @@
 
 # Tactic Remote
 
-### Control Claude Code from your iPhone or iPad
+### Control Claude Code, Codex, and Amp from your iPhone or iPad
 
 [![iOS](https://img.shields.io/badge/iOS-17.0%2B-blue.svg?style=flat&logo=apple&logoColor=white)](https://apps.apple.com/us/app/tactic-remote-ai-coding/id6758008464)
 [![macOS](https://img.shields.io/badge/macOS-14.0%2B-green.svg?style=flat&logo=apple&logoColor=white)](https://github.com/TacticSpaceTech/TacticRemote/releases)
@@ -17,13 +17,13 @@
 
 ---
 
-> **Now on the App Store worldwide.** v1.6.6 — Session-aware notifications, cold-start deep links, stronger push delivery, and Live Activity cleanup improvements. Mainland China will follow once regulatory approval is complete.
+> **Tactic Remote v1.7.0 is now available.** Choose Claude Code, OpenAI Codex, or Sourcegraph Amp for each new session, organize parallel work with Git worktrees, and keep the same mobile control surface across your AI coding workflow.
 
 ---
 
 ## Overview
 
-Tactic Remote brings the power of [Claude Code](https://claude.ai/code) to your iPhone or iPad. Interact with your coding sessions from anywhere — whether you're on the couch, in a meeting, or away from your desk.
+Tactic Remote brings AI coding agents to your iPhone or iPad. Run Claude Code, OpenAI Codex, or Sourcegraph Amp on your computer, then monitor output, send prompts, approve blocking steps, and compare worktree-based explorations from your mobile device.
 
 Perfect for reviewing code, monitoring long-running tasks, or quick iterations without being tied to your Mac.
 
@@ -33,20 +33,23 @@ Perfect for reviewing code, monitoring long-running tasks, or quick iterations w
 
 <div align="center">
 
-### **Chat Mode**
-Dedicated conversation interface with side panels for interacting with Claude
+### **Multi-Agent Sessions**
+Choose Claude Code, OpenAI Codex, or Sourcegraph Amp when creating a session
+
+### **Git Worktree Workflow**
+Group sibling worktrees and switch between parallel implementation branches
+
+### **Smart Prompt Toolbar**
+Auto-reveals shortcuts for blocking TUI prompts like confirmations and trust dialogs
 
 ### **iOS Terminal Interface**
 Full terminal with ANSI color support, real-time streaming, search, and keyboard submit
 
-### **iPad-Optimized Layout**
-Native split-view with hardware keyboard shortcuts
-
-### **App Lock**
-Protect sessions with Face ID or Touch ID
-
 ### **Git Workspace Panel**
 Live git status, file tree browsing, and branch info
+
+### **iPad-Optimized Layout**
+Native split-view with hardware keyboard shortcuts
 
 ### **Cloud Speech-to-Text**
 Dictate prompts in 25+ languages
@@ -64,10 +67,13 @@ Browse your Mac's file system and select project directories from iOS
 Connect via WiFi or Cloudflare tunnel — with automatic fallback switching
 
 ### **Push Notifications**
-Get notified when Claude completes tasks or sends hook events
+Get notified when an agent completes tasks or sends hook events
 
 ### **Live Activity & Widgets**
-Real-time Claude status on Lock Screen, Dynamic Island, and Home Screen widgets
+Real-time agent status on Lock Screen, Dynamic Island, and Home Screen widgets
+
+### **App Lock**
+Protect sessions with Face ID or Touch ID
 
 ### **Pro Subscriptions**
 Free trial included — unlock all features with monthly or yearly plans
@@ -90,8 +96,8 @@ Free trial included — unlock all features with monthly or yearly plans
 │                                                                │         │
 │                                                                ▼         │
 │                                                       ┌─────────────────┐│
-│                                                       │  Claude Code    ││
-│                                                       │     CLI         ││
+│                                                       │ Coding Agent    ││
+│                                                       │ Claude/Codex/Amp││
 │                                                       └─────────────────┘│
 │                                                                          │
 └──────────────────────────────────────────────────────────────────────────┘
@@ -103,7 +109,7 @@ Free trial included — unlock all features with monthly or yearly plans
 |--------|----------|---------|
 | **npx** | Mac / Linux | `npx tacticremote` |
 | **Homebrew** | Mac | `brew install TacticSpaceTech/tap/tacticremote` |
-| **Mac App** | macOS 14+ | Menu bar GUI with one-click start |
+| **Mac App** | macOS 14+ | Menu bar GUI with one-click start and auto-update |
 
 ---
 
@@ -134,7 +140,7 @@ npx tacticremote [options]
 
 If you prefer a graphical interface:
 
-1. **Download** the DMG from [Releases](https://github.com/TacticSpaceTech/TacticRemote/releases)
+1. **Download** the DMG from [Releases](https://github.com/TacticSpaceTech/TacticRemote/releases/tag/v1.7.0)
 2. **Install** — open the DMG and drag **Tactic Remote** to Applications
 3. **Launch** — open from Applications, a menu bar icon will appear
 4. **Setup** — the app will auto-install dependencies (Homebrew, Node.js, tmux) if needed
@@ -164,7 +170,7 @@ The Mac app also provides:
 <td align="center" width="33%">
 <b>Mac App</b><br>
 <i>macOS 14+</i><br><br>
-<a href="https://github.com/TacticSpaceTech/TacticRemote/releases">
+<a href="https://github.com/TacticSpaceTech/TacticRemote/releases/tag/v1.7.0">
 <img src="https://img.shields.io/badge/Download-DMG-success.svg?style=for-the-badge&logo=apple" width="160" alt="Download DMG">
 </a>
 </td>
@@ -186,7 +192,7 @@ The Mac app also provides:
 | **macOS** | 14.0 Sonoma | For Mac app or CLI |
 | **Node.js** | 16.0+ | Required for CLI; auto-installed by Mac app |
 | **tmux** | Latest | Auto-installed by Mac app or Homebrew |
-| **Claude Code CLI** | Latest | Install from [claude.ai/code](https://claude.ai/code) |
+| **AI coding agent CLI** | Latest | Install and sign in to at least one: Claude Code, OpenAI Codex, or Sourcegraph Amp |
 
 ---
 
@@ -252,9 +258,9 @@ Public access uses Cloudflare's secure tunnel with TLS encryption — no open po
 - The app supports automatic fallback between LAN and tunnel connections
 - iOS app auto-reconnects up to 5 times
 
-### Claude not starting
+### Agent not starting
 
-- Ensure Claude Code CLI is installed: `claude --version`
+- Ensure your selected agent CLI is installed and signed in: `claude --version`, `codex --version`, or `amp --version`
 - Check tmux is installed: `tmux -V`
 - Verify the working directory exists
 
