@@ -17,7 +17,7 @@
 
 ---
 
-> **Tactic Remote v1.9.0 is now available.** Check Claude, Codex, Amp, and Droid usage limits from your phone, launch Droid sessions, and keep work moving through more reliable reconnects, session recovery, and notification routing.
+> **Tactic Remote 1.10** improves Windows sign-in, account linking, and Tactic Relay connections. Continue your AI coding tasks from iPhone and iPad with a project-based home screen and reusable prompt drafts.
 
 ---
 
@@ -29,14 +29,15 @@ It is built for developers who want to stay close to AI coding sessions without 
 
 ---
 
-## What's New in 1.9.0
+## What's New in 1.10
 
-- **Agent usage at a glance** — View current Claude, Codex, Amp, and Droid usage limits in the sidebar. Account data is read locally from the signed-in computer.
-- **Droid support** — Factory Droid joins the agent picker alongside Claude Code, Codex, and Amp.
-- **Smarter recovery** — Reconnect and session recovery are more reliable after network changes, device switches, or companion restarts.
-- **Better routing** — Notifications return to the originating conversation, and choosing a folder with an existing session switches to it correctly.
-- **More accurate state** — Session lists and plan limits stay correct across restarts, with regional voice routing and broader stability improvements.
-- **Privacy-conscious analytics** — Optional pseudonymous product analytics never include code, prompts, terminal output, file paths, or project names and can be disabled in Settings.
+- **Windows account connections** — Sign in, bind your PC, and connect from an iPhone or iPad using the same Tactic account.
+- **Tactic Relay on Windows** — Improved encrypted remote connections and reconnect behavior.
+- **Project-based home screen** — Find a project, then return to its Agent conversations on iPhone and iPad.
+- **Review before sending** — Commands and reusable prompts go into a draft, ready for your context.
+
+This release updates iOS/iPadOS and the Windows Preview companion to 1.10.0. The existing macOS 1.9.0 download and Mac/Linux CLI remain available separately. The browser workspace is not part of this public launch.
+
 
 ---
 
@@ -81,7 +82,7 @@ Create, switch, and delete multiple tmux sessions
 Browse your computer's file system and select project directories from iOS
 
 ### **Local & Remote Access**
-Connect via Wi-Fi or Cloudflare Tunnel, with automatic fallback switching
+Connect on your local network, or use Tactic Relay with the Windows 1.10 companion for remote access. Advanced tunnel connections remain available.
 
 ### **Push Notifications**
 Get notified when an agent completes tasks or sends hook events
@@ -177,7 +178,7 @@ The Mac app also provides:
 
 > 🟡 **Preview release.** The Windows companion is published as a preview. Most flows work, but expect rough edges compared to the Mac app and iOS app. We recommend macOS users continue using the Mac companion; we welcome bug reports from Windows users.
 
-1. **Download** the installer from [Releases](https://github.com/TacticSpaceTech/TacticRemote/releases/tag/v1.9.0): `TacticRemote-Windows-Setup-1.9.0.exe`
+1. **Download** the installer from [Releases](https://github.com/TacticSpaceTech/TacticRemote/releases/tag/v1.9.0): `TacticRemote-Windows-Setup-1.10.0.exe`
 2. **Install** by running the installer (Windows 10 or 11, x64)
 3. **Launch** Tactic Remote from the Start menu
 4. **Start Server** from the app window
