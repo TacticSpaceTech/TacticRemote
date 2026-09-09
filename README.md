@@ -17,7 +17,7 @@
 
 ---
 
-> **Tactic Remote 1.10** improves Windows sign-in, account linking, and Tactic Relay connections. Continue your AI coding tasks from iPhone and iPad with a project-based home screen and reusable prompt drafts.
+> **Tactic Remote 1.10** brings updated Mac and Windows companions, smoother account and Tactic Relay connections, and a project-based home screen on iPhone and iPad. Your coding agents keep running on your computer while you check progress and continue the work from your mobile device.
 
 ---
 
@@ -32,11 +32,12 @@ It is built for developers who want to stay close to AI coding sessions without 
 ## What's New in 1.10
 
 - **Windows account connections** — Sign in, bind your PC, and connect from an iPhone or iPad using the same Tactic account.
-- **Tactic Relay on Windows** — Improved encrypted remote connections and reconnect behavior.
+- **Tactic Relay** — Connect to your Mac or Windows PC remotely, with end-to-end encrypted terminal and file transfers.
+- **Mac 1.10 companion** — A signed and Apple-notarized installer for Apple Silicon and Intel Macs, with the Node.js runtime included.
 - **Project-based home screen** — Find a project, then return to its Agent conversations on iPhone and iPad.
 - **Review before sending** — Commands and reusable prompts go into a draft, ready for your context.
 
-This release updates iOS/iPadOS and the Windows Preview companion to 1.10.0. The existing macOS 1.9.0 download and Mac/Linux CLI remain available separately. The browser workspace is not part of this public launch.
+This release includes the Mac 1.10.0 companion and Windows 1.10.0 Preview alongside the iPhone and iPad app. The Mac/Linux CLI remains a separate published package; use its own release information for version details.
 
 
 ---
@@ -76,13 +77,13 @@ Dictate prompts in 25+ languages
 Send files from iOS to the remote server
 
 ### **Multi-Session Management**
-Create, switch, and delete multiple tmux sessions
+Create, switch, and manage multiple Agent sessions
 
 ### **Remote File Browser**
 Browse your computer's file system and select project directories from iOS
 
 ### **Local & Remote Access**
-Connect on your local network, or use Tactic Relay with the Windows 1.10 companion for remote access. Advanced tunnel connections remain available.
+Connect on your local network, or use Tactic Relay with the Mac or Windows 1.10 companion for remote access. Advanced tunnel connections remain available.
 
 ### **Push Notifications**
 Get notified when an agent completes tasks or sends hook events
@@ -157,7 +158,7 @@ npx tacticremote [options]
 
 If you prefer a graphical interface:
 
-1. **Download** the DMG from [Releases](https://github.com/TacticSpaceTech/TacticRemote/releases/tag/v1.9.0)
+1. **Download** the DMG from [Releases](https://github.com/TacticSpaceTech/TacticRemote/releases/tag/v1.10.0)
 2. **Install** by opening the DMG and dragging **Tactic Remote** to Applications
 3. **Launch** from Applications; a menu bar icon will appear
 4. **Start Server** from the menu bar app
@@ -165,6 +166,8 @@ If you prefer a graphical interface:
 
 The Mac app also provides:
 
+- Tactic account host binding and encrypted Tactic Relay connections
+- A bundled Node.js runtime for Apple Silicon and Intel Macs
 - One-click Cloudflare Tunnel for remote access
 - Live client count and session monitoring
 - Copy server URL, tunnel address, and API key from the menu
@@ -178,7 +181,7 @@ The Mac app also provides:
 
 > 🟡 **Preview release.** The Windows companion is published as a preview. Most flows work, but expect rough edges compared to the Mac app and iOS app. We recommend macOS users continue using the Mac companion; we welcome bug reports from Windows users.
 
-1. **Download** the installer from [Releases](https://github.com/TacticSpaceTech/TacticRemote/releases/tag/v1.9.0): `TacticRemote-Windows-Setup-1.10.0.exe`
+1. **Download** the installer from [Releases](https://github.com/TacticSpaceTech/TacticRemote/releases/tag/v1.10.0): `TacticRemote-Windows-Setup-1.10.0.exe`
 2. **Install** by running the installer (Windows 10 or 11, x64)
 3. **Launch** Tactic Remote from the Start menu
 4. **Start Server** from the app window
@@ -207,14 +210,14 @@ Known limitations of the preview:
 <td align="center" width="25%">
 <b>Mac App</b><br>
 <i>macOS 14.6+</i><br><br>
-<a href="https://github.com/TacticSpaceTech/TacticRemote/releases/tag/v1.9.0">
+<a href="https://github.com/TacticSpaceTech/TacticRemote/releases/tag/v1.10.0">
 <img src="https://img.shields.io/badge/Download-DMG-success.svg?style=for-the-badge&logo=apple" width="160" alt="Download DMG">
 </a>
 </td>
 <td align="center" width="25%">
 <b>Windows App</b> 🟡<br>
 <i>Windows 10/11 — Preview</i><br><br>
-<a href="https://github.com/TacticSpaceTech/TacticRemote/releases/tag/v1.9.0">
+<a href="https://github.com/TacticSpaceTech/TacticRemote/releases/tag/v1.10.0">
 <img src="https://img.shields.io/badge/Download-EXE%20(Preview)-orange.svg?style=for-the-badge&logo=windows" width="160" alt="Download Windows Installer (Preview)">
 </a>
 </td>
@@ -233,10 +236,10 @@ Known limitations of the preview:
 | Platform | Minimum Version | Notes |
 |----------|----------------|-------|
 | **iOS** | 16.4 | iPhone or iPad |
-| **macOS** | 14.6 Sonoma | For Mac app or CLI |
+| **macOS** | 14.6 Sonoma | Mac app; supports Apple Silicon and Intel |
 | **Windows** | 10 or 11 (x64) | For Windows companion app (Preview) |
 | **Linux** | Any | For CLI (`npx tacticremote`) |
-| **Node.js** | 16.0+ | Required for CLI; auto-installed by Mac app when needed |
+| **Node.js** | See the CLI package requirements | Included in the Mac companion; no separate Node.js installation needed for the DMG |
 | **tmux** | Latest | Required by Mac/Linux backends; auto-installed by the Mac app or Homebrew |
 | **AI coding agent CLI** | Latest | Install and sign in to at least one: Claude Code, OpenAI Codex, Sourcegraph Amp, or Factory Droid |
 
@@ -253,6 +256,12 @@ ws://192.168.1.x:8765
 ```
 
 Ensure your iOS device and computer are on the same Wi-Fi network.
+
+### Tactic Relay
+
+Use the Mac or Windows 1.10 companion to bind your computer to your Tactic account and enable Relay. On iPhone or iPad, sign in to the same account, select the computer, and follow the connection prompts. Keep the host computer running and online.
+
+Relay transfers end-to-end encrypted terminal and file data. Your Agent tools continue to use the credentials configured on the host computer; signing in to Tactic does not copy Agent credentials between computers.
 
 ### Public Access with Cloudflare Tunnel
 
@@ -284,9 +293,13 @@ File operations are restricted to your home directory by default. Customize the 
 npx tacticremote --path "/Users/yourname/Projects"
 ```
 
+### Tactic Relay
+
+Tactic Relay forwards end-to-end encrypted terminal and file data. Account binding manages access to the host; it does not move your projects or Agent credentials to another computer.
+
 ### Cloudflare Tunnel
 
-Public access uses Cloudflare's secure tunnel with TLS encryption, so you do not need to open inbound ports.
+Tunnel access uses Cloudflare's secure tunnel with TLS encryption, so you do not need to open inbound ports.
 
 ---
 
@@ -294,20 +307,19 @@ Public access uses Cloudflare's secure tunnel with TLS encryption, so you do not
 
 ### Cannot connect to server
 
-- Verify your computer and iOS device are on the same network
-- Check that the computer firewall allows connections on port 8765
+- For local connections, verify your computer and iOS device are on the same network and the firewall allows the server port (8765 by default).
+- For Tactic Relay, verify the host is bound to the expected account, Relay is online, and the host computer is awake.
 - Confirm the server is running: `lsof -i :8765` on Mac/Linux or `Get-NetTCPConnection -LocalPort 8765` in Windows PowerShell
 
 ### Connection drops frequently
 
-- Check Wi-Fi stability
-- The app supports automatic fallback between LAN and tunnel connections
-- iOS app auto-reconnects up to 5 times
+- Check the network connection on both devices and keep the host computer awake.
+- For Relay, check the companion's Relay status and select the computer again after connectivity returns.
 
 ### Agent not starting
 
 - Ensure your selected agent CLI is installed and signed in: `claude --version`, `codex --version`, `amp --version`, or `droid --version`
-- Check tmux is installed: `tmux -V`
+- On Mac/Linux, check tmux is available: `tmux -V`. Windows uses its own terminal backend and does not require tmux.
 - Verify the working directory exists
 
 ---
