@@ -17,7 +17,7 @@
 
 ---
 
-> **Tactic Remote 1.10** brings updated Mac and Windows companions, smoother account and Tactic Relay connections, and a project-based home screen on iPhone and iPad. Your coding agents keep running on your computer while you check progress and continue the work from your mobile device.
+> **Tactic Remote 1.11** makes connection failures and agent waiting states easier to act on. Follow connection-specific guidance, keep messages that an agent cannot yet accept, and return to your existing project from iPhone or iPad. Update the host as well as the mobile app for message retention.
 
 ---
 
@@ -29,15 +29,17 @@ It is built for developers who want to stay close to AI coding sessions without 
 
 ---
 
-## What's New in 1.10
+## What's New in 1.11
 
-- **Windows account connections** — Sign in, bind your PC, and connect from an iPhone or iPad using the same Tactic account.
-- **Tactic Relay** — Connect to your Mac or Windows PC remotely, with end-to-end encrypted terminal and file transfers.
-- **Mac 1.10 companion** — A signed and Apple-notarized installer for Apple Silicon and Intel Macs, with the Node.js runtime included.
-- **Project-based home screen** — Find a project, then return to its Agent conversations on iPhone and iPad.
-- **Review before sending** — Commands and reusable prompts go into a draft, ready for your context.
+- **Connection guidance** — The home screen shows troubleshooting steps for the connection method in use.
+- **Agent readiness and retained messages** — When an agent cannot accept an instruction, the app explains why and retains it. Requires an updated host.
+- **More reliable replies** — Fixes replies that could stop appearing during trust confirmation, provider sign-in, or agent startup, plus rapid reconnect and account-linking failures.
+- **Easier account sign-in** — More visible Passkey entry points, scrollable sign-in pages, and clearer cancellation feedback.
+- **Contextual Pro screens** — See the feature that prompted an upgrade and redeem App Store offer codes inside the app, subject to offer eligibility.
 
-This release includes the Mac 1.10.0 companion and Windows 1.10.0 Preview alongside the iPhone and iPad app. The Mac/Linux CLI remains a separate published package; use its own release information for version details.
+The Mac companion and Mac/Linux CLI target 1.11.0. Windows Preview remains at 1.10.0 and keeps its own download and compatibility information. Platform availability can differ during rollout; check the actual version before installing.
+
+Read the [1.11 upgrade guide](https://tacticremote.com/blog/2026-10-13-tactic-remote-1-11-clearer-connections), [connection checklist](https://tacticremote.com/blog/2026-10-13-iphone-host-connection-troubleshooting), and [agent readiness guide](https://tacticremote.com/blog/2026-10-13-agent-waiting-trust-sign-in).
 
 
 ---
@@ -83,7 +85,7 @@ Create, switch, and manage multiple Agent sessions
 Browse your computer's file system and select project directories from iOS
 
 ### **Local & Remote Access**
-Connect on your local network, or use Tactic Relay with the Mac or Windows 1.10 companion for remote access. Advanced tunnel connections remain available.
+Connect on your local network, or use Tactic Relay with the current Mac companion or Windows 1.10 Preview for remote access. Advanced tunnel connections remain available.
 
 ### **Push Notifications**
 Get notified when an agent completes tasks or sends hook events
@@ -133,13 +135,13 @@ Protect sessions with Face ID or Touch ID
 
 ## Quick Start
 
-The fastest way to get started on Mac or Linux is one command:
+Install `tmux` and a supported agent CLI, complete that agent’s sign-in on the computer, then start the Mac/Linux host:
 
 ```bash
 npx tacticremote
 ```
 
-Scan the QR code with the Tactic Remote iOS app and you are connected.
+Scan the QR code with the Tactic Remote iOS app and follow the pairing prompts. For a local connection, allow local-network access and keep both devices on a reachable network.
 
 ### Options
 
@@ -209,8 +211,8 @@ Known limitations of the preview:
 </td>
 <td align="center" width="25%">
 <b>Mac App</b><br>
-<i>macOS 14.6+</i><br><br>
-<a href="https://github.com/TacticSpaceTech/TacticRemote/releases/tag/v1.10.0">
+<i>macOS 14.6+ · 1.11.0</i><br><br>
+<a href="https://github.com/TacticSpaceTech/TacticRemote/releases/download/v1.11.0/TacticRemote-Mac-1.11.0.dmg">
 <img src="https://img.shields.io/badge/Download-DMG-success.svg?style=for-the-badge&logo=apple" width="160" alt="Download DMG">
 </a>
 </td>
@@ -259,7 +261,7 @@ Ensure your iOS device and computer are on the same Wi-Fi network.
 
 ### Tactic Relay
 
-Use the Mac or Windows 1.10 companion to bind your computer to your Tactic account and enable Relay. On iPhone or iPad, sign in to the same account, select the computer, and follow the connection prompts. Keep the host computer running and online.
+Use the current Mac companion or Windows 1.10 Preview to bind your computer to your Tactic account and enable Relay. On iPhone or iPad, sign in to the same account, select the computer, and follow the connection prompts. Keep the host computer running and online.
 
 Relay transfers end-to-end encrypted terminal and file data. Your Agent tools continue to use the credentials configured on the host computer; signing in to Tactic does not copy Agent credentials between computers.
 
