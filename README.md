@@ -17,7 +17,7 @@
 
 ---
 
-> **Tactic Remote 1.11** adds host support for clearer agent readiness and retained messages. Update both the computer host and the mobile app for these features. The iOS 1.11 update becomes available through its separate App Store rollout.
+> **Tactic Remote 1.12** improves terminal output, session recovery, and input handling while agents are starting or waiting. Update the computer host and mobile app for the latest improvements.
 
 ---
 
@@ -29,15 +29,13 @@ It is built for developers who want to stay close to AI coding sessions without 
 
 ---
 
-## What's New in 1.11
+## What's New in 1.12
 
-- **Connection guidance** — The home screen shows troubleshooting steps for the connection method in use.
-- **Agent readiness and retained messages** — When an agent cannot accept an instruction, the app explains why and retains it. Requires an updated host.
-- **More reliable replies** — Fixes replies that could stop appearing during trust confirmation, provider sign-in, or agent startup, plus rapid reconnect and account-linking failures.
-- **Easier account sign-in** — More visible Passkey entry points, scrollable sign-in pages, and clearer cancellation feedback.
-- **Contextual Pro screens** — See the feature that prompted an upgrade and redeem App Store offer codes inside the app, subject to offer eligibility.
+- Improves terminal output and session recovery after reconnecting.
+- Improves input handling while agents are starting or waiting.
+- Reduces duplicate task notifications.
 
-The Mac companion and Mac/Linux CLI are version 1.11.0. The mobile features above require iOS 1.11. Windows Preview remains at 1.10.0 and keeps its own download and compatibility information. Check the actual App Store version during rollout.
+The Mac companion and Mac/Linux CLI are version 1.12.0. Mobile improvements require iOS 1.12. Windows Preview remains at 1.10.0 with its own download and compatibility information. Check the actual App Store version during rollout.
 
 
 ---
@@ -158,7 +156,7 @@ npx tacticremote [options]
 
 If you prefer a graphical interface:
 
-1. **Download** the notarized 1.11.0 DMG from [Releases](https://github.com/TacticSpaceTech/TacticRemote/releases/tag/v1.11.0) (macOS 14.6 or later)
+1. **Download** the 1.12.0 DMG from [Releases](https://github.com/TacticSpaceTech/TacticRemote/releases/tag/v1.12.0) (macOS 14.6 or later)
 2. **Install** by opening the DMG and dragging **Tactic Remote** to Applications
 3. **Launch** from Applications; a menu bar icon will appear
 4. **Start Server** from the menu bar app
