@@ -17,7 +17,7 @@
 
 ---
 
-> **Tactic Remote 1.12** improves terminal output, session recovery, and input handling while agents are starting or waiting. Update the computer host and mobile app for the latest improvements.
+> **Tactic Remote 1.13** adds Portal: discover websites running on your computer, open a private preview from iPhone or iPad, and optionally create an expiring, revocable share link. Update both the mobile app and computer host to 1.13.
 
 ---
 
@@ -29,13 +29,24 @@ It is built for developers who want to stay close to AI coding sessions without 
 
 ---
 
-## What's New in 1.12
+## What's New in 1.13
 
-- Improves terminal output and session recovery after reconnecting.
-- Improves input handling while agents are starting or waiting.
-- Reduces duplicate task notifications.
+- Discover running development websites and open a private Portal preview from iPhone or iPad.
+- Optionally share a preview with an expiring, revocable link after the content review step. Visitors can report a problem.
+- Choose phone, desktop or ultrawide preview widths and adjust the conversation split.
+- The updated computer host explains preview limits and when Portal is starting or busy.
 
-The Mac companion and Mac/Linux CLI are version 1.12.0. Mobile improvements require iOS 1.12. Windows is version 1.12.0 Preview and remains unsigned, with manual updates. Check the actual App Store version during rollout.
+| Component | Current version | Notes |
+| --- | --- | --- |
+| iPhone / iPad | 1.13.0 | Available on the App Store |
+| Mac app | 1.13.0, build 32 | Signed, notarized universal app; built-in runtime |
+| Windows app | 1.13.0 Preview | Unsigned; updates install manually |
+| npm CLI | 1.13.0 | macOS and Linux, ARM64 and x64 |
+| Homebrew | 1.13.0 | Same compiled platform hosts; requires the updated tap |
+
+Private preview and public sharing are separate choices. Sharing requires the explicit review/consent step and is offered only where OpenAI services are available. Review does not establish that an application is secure; do not share credentials, customer records or administrative tools.
+
+[Release notes](https://github.com/TacticSpaceTech/TacticRemote/releases/tag/v1.13.0) · [Upgrade announcement](https://tacticremote.com/news/tactic-remote-1-13/) · [Portal design](https://tacticremote.com/blog/tactic-remote-1-13-in-detail/) · [iPhone localhost tutorial](https://tacticremote.com/blog/preview-localhost-on-iphone/)
 
 
 ---
@@ -43,6 +54,9 @@ The Mac companion and Mac/Linux CLI are version 1.12.0. Mobile improvements requ
 ## Features
 
 <div align="center">
+
+### **Portal Website Previews**
+Discover running project websites, open private previews, and explicitly choose whether to create reviewed, expiring share links
 
 ### **Chat Mode for Agent Output**
 Read agent messages, tool calls, Thinking sections, and streaming updates in a mobile-friendly layout
@@ -81,7 +95,7 @@ Create, switch, and manage multiple Agent sessions
 Browse your computer's file system and select project directories from iOS
 
 ### **Local & Remote Access**
-Connect on your local network, or use Tactic Relay with the current Mac companion or Windows 1.12 Preview for remote access. Advanced tunnel connections remain available.
+Connect on your local network, or use Tactic Relay with the current Mac companion or Windows 1.13 Preview for remote access. Advanced tunnel connections remain available.
 
 ### **Push Notifications**
 Get notified when an agent completes tasks or sends hook events
@@ -122,8 +136,8 @@ Protect sessions with Face ID or Touch ID
 
 | Method | Platform | Command |
 |--------|----------|---------|
-| **npx** | Mac / Linux | `npx tacticremote` |
-| **Homebrew** | Mac | `brew install TacticSpaceTech/tap/tacticremote` |
+| **npx** | Mac / Linux | `npx tacticremote@1.13.0` |
+| **Homebrew** | Mac / Linux | `brew install TacticSpaceTech/tap/tacticremote` |
 | **Mac App** | macOS 14.6+ | Menu bar GUI with one-click start and auto-update |
 | **Windows App** (Preview) | Windows 10/11 x64 | Companion app — preview release, may have issues |
 
@@ -134,15 +148,17 @@ Protect sessions with Face ID or Touch ID
 Install `tmux` and a supported agent CLI, complete that agent’s sign-in on the computer, then start the Mac/Linux host:
 
 ```bash
-npx tacticremote
+npx tacticremote@1.13.0
 ```
+
+For native Windows, use the Preview installer below. Run the Linux npm CLI inside WSL2; there is no native win32 npm platform package.
 
 Scan the QR code with the Tactic Remote iOS app and follow the pairing prompts. For a local connection, allow local-network access and keep both devices on a reachable network.
 
 ### Options
 
 ```text
-npx tacticremote [options]
+npx tacticremote@1.13.0 [options]
 
   -p, --port <n>      Port to listen on          (default: 8765)
   --path <dir>        Allowed base directory      (default: $HOME)
@@ -156,7 +172,7 @@ npx tacticremote [options]
 
 If you prefer a graphical interface:
 
-1. **Download** the 1.12.0 DMG from [Releases](https://github.com/TacticSpaceTech/TacticRemote/releases/tag/v1.12.0) (macOS 14.6 or later)
+1. **Download** the 1.13.0 DMG from [Releases](https://github.com/TacticSpaceTech/TacticRemote/releases/tag/v1.13.0) (macOS 14.6 or later)
 2. **Install** by opening the DMG and dragging **Tactic Remote** to Applications
 3. **Launch** from Applications; a menu bar icon will appear
 4. **Start Server** from the menu bar app
@@ -179,7 +195,7 @@ The Mac app also provides:
 
 > 🟡 **Preview release.** The Windows companion is published as a preview. Most flows work, but expect rough edges compared to the Mac app and iOS app. We recommend macOS users continue using the Mac companion; we welcome bug reports from Windows users.
 
-1. **Download** the installer from [Releases](https://github.com/TacticSpaceTech/TacticRemote/releases/tag/v1.12.0): `TacticRemote-Windows-Setup-1.12.0.exe`
+1. **Download** the installer from [Releases](https://github.com/TacticSpaceTech/TacticRemote/releases/tag/v1.13.0): `TacticRemote-Windows-Setup-1.13.0.exe`
 2. **Install** by running the installer (Windows 10 or 11, x64)
 3. **Launch** Tactic Remote from the Start menu
 4. **Start Server** from the app window
@@ -207,22 +223,22 @@ Known limitations of the preview:
 </td>
 <td align="center" width="25%">
 <b>Mac App</b><br>
-<i>macOS 14.6+ · 1.12.0</i><br><br>
-<a href="https://github.com/TacticSpaceTech/TacticRemote/releases/download/v1.12.0/TacticRemote-Mac-1.12.0.dmg">
+<i>macOS 14.6+ · 1.13.0</i><br><br>
+<a href="https://github.com/TacticSpaceTech/TacticRemote/releases/download/v1.13.0/TacticRemote-Mac-1.13.0.dmg">
 <img src="https://img.shields.io/badge/Download-DMG-success.svg?style=for-the-badge&logo=apple" width="160" alt="Download DMG">
 </a>
 </td>
 <td align="center" width="25%">
 <b>Windows App</b> 🟡<br>
 <i>Windows 10/11 — Preview</i><br><br>
-<a href="https://github.com/TacticSpaceTech/TacticRemote/releases/tag/v1.12.0">
+<a href="https://github.com/TacticSpaceTech/TacticRemote/releases/tag/v1.13.0">
 <img src="https://img.shields.io/badge/Download-EXE%20(Preview)-orange.svg?style=for-the-badge&logo=windows" width="160" alt="Download Windows Installer (Preview)">
 </a>
 </td>
 <td align="center" width="25%">
 <b>CLI</b><br>
 <i>Mac / Linux</i><br><br>
-<code>npx tacticremote</code>
+<code>npx tacticremote@1.13.0</code>
 </td>
 </tr>
 </table>
@@ -236,7 +252,7 @@ Known limitations of the preview:
 | **iOS** | 16.4 | iPhone or iPad |
 | **macOS** | 14.6 Sonoma | Mac app; supports Apple Silicon and Intel |
 | **Windows** | 10 or 11 (x64) | For Windows companion app (Preview) |
-| **Linux** | Any | For CLI (`npx tacticremote`) |
+| **Linux** | Any | For CLI (`npx tacticremote@1.13.0`) |
 | **Node.js** | See the CLI package requirements | Included in the Mac companion; no separate Node.js installation needed for the DMG |
 | **tmux** | Latest | Required by Mac/Linux backends; auto-installed by the Mac app or Homebrew |
 | **AI coding agent CLI** | Latest | Install and sign in to at least one: Claude Code, OpenAI Codex, Sourcegraph Amp, or Factory Droid |
@@ -257,7 +273,7 @@ Ensure your iOS device and computer are on the same Wi-Fi network.
 
 ### Tactic Relay
 
-Use the current Mac companion or Windows 1.12 Preview to bind your computer to your Tactic account and enable Relay. On iPhone or iPad, sign in to the same account, select the computer, and follow the connection prompts. Keep the host computer running and online.
+Use the current Mac companion or Windows 1.13 Preview to bind your computer to your Tactic account and enable Relay. On iPhone or iPad, sign in to the same account, select the computer, and follow the connection prompts. Keep the host computer running and online.
 
 Relay transfers end-to-end encrypted terminal and file data. Your Agent tools continue to use the credentials configured on the host computer; signing in to Tactic does not copy Agent credentials between computers.
 
@@ -266,7 +282,7 @@ Relay transfers end-to-end encrypted terminal and file data. Your Agent tools co
 Connect from anywhere using a secure tunnel, without opening ports on your machine:
 
 ```bash
-npx tacticremote --tunnel
+npx tacticremote@1.13.0 --tunnel
 ```
 
 The server generates a `wss://` URL automatically. Use this URL in the iOS app.
@@ -278,7 +294,7 @@ The server generates a `wss://` URL automatically. Use this URL in the iOS app.
 ### API Key Authentication
 
 ```bash
-npx tacticremote --api-key "your-secure-key"
+npx tacticremote@1.13.0 --api-key "your-secure-key"
 ```
 
 Then enter the same key in the iOS app.
@@ -288,7 +304,7 @@ Then enter the same key in the iOS app.
 File operations are restricted to your home directory by default. Customize the allowed base path:
 
 ```bash
-npx tacticremote --path "/Users/yourname/Projects"
+npx tacticremote@1.13.0 --path "/Users/yourname/Projects"
 ```
 
 ### Tactic Relay
