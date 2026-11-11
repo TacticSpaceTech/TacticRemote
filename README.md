@@ -39,14 +39,15 @@ It is built for developers who want to stay close to AI coding sessions without 
 | Component | Current version | Notes |
 | --- | --- | --- |
 | iPhone / iPad | 1.13.0 | Available on the App Store |
-| Mac app | 1.13.0, build 32 | Signed, notarized universal app; built-in runtime |
-| Windows app | 1.13.0 Preview | Unsigned; updates install manually |
+| Web App | 1.13 | Available at [app.tacticremote.com](https://app.tacticremote.com) |
+| Mac app | 1.13.1, build 33 | Signed, notarized universal app; built-in runtime |
+| Windows app | 1.13.1 Preview | Unsigned; updates install manually |
 | npm CLI | 1.13.0 | macOS and Linux, ARM64 and x64 |
 | Homebrew | 1.13.0 | Same compiled platform hosts; requires the updated tap |
 
 Private preview and public sharing are separate choices. Sharing requires the explicit review/consent step and is offered only where OpenAI services are available. Review does not establish that an application is secure; do not share credentials, customer records or administrative tools.
 
-[Release notes](https://github.com/TacticSpaceTech/TacticRemote/releases/tag/v1.13.0) · [Upgrade announcement](https://tacticremote.com/news/tactic-remote-1-13/) · [Portal design](https://tacticremote.com/blog/tactic-remote-1-13-in-detail/) · [iPhone localhost tutorial](https://tacticremote.com/blog/preview-localhost-on-iphone/)
+[Release notes](https://github.com/TacticSpaceTech/TacticRemote/releases/tag/v1.13.1) · [Upgrade announcement](https://tacticremote.com/news/tactic-remote-1-13/) · [Portal design](https://tacticremote.com/blog/tactic-remote-1-13-in-detail/) · [iPhone localhost tutorial](https://tacticremote.com/blog/preview-localhost-on-iphone/)
 
 
 ---
@@ -172,7 +173,7 @@ npx tacticremote@1.13.0 [options]
 
 If you prefer a graphical interface:
 
-1. **Download** the 1.13.0 DMG from [Releases](https://github.com/TacticSpaceTech/TacticRemote/releases/tag/v1.13.0) (macOS 14.6 or later)
+1. **Download** the 1.13.1 DMG from [Releases](https://github.com/TacticSpaceTech/TacticRemote/releases/tag/v1.13.1) (macOS 14.6 or later)
 2. **Install** by opening the DMG and dragging **Tactic Remote** to Applications
 3. **Launch** from Applications; a menu bar icon will appear
 4. **Start Server** from the menu bar app
@@ -195,7 +196,7 @@ The Mac app also provides:
 
 > 🟡 **Preview release.** The Windows companion is published as a preview. Most flows work, but expect rough edges compared to the Mac app and iOS app. We recommend macOS users continue using the Mac companion; we welcome bug reports from Windows users.
 
-1. **Download** the installer from [Releases](https://github.com/TacticSpaceTech/TacticRemote/releases/tag/v1.13.0): `TacticRemote-Windows-Setup-1.13.0.exe`
+1. **Download** the installer from [Releases](https://github.com/TacticSpaceTech/TacticRemote/releases/tag/v1.13.1): `TacticRemote-Windows-Setup-1.13.1.exe`
 2. **Install** by running the installer (Windows 10 or 11, x64)
 3. **Launch** Tactic Remote from the Start menu
 4. **Start Server** from the app window
@@ -223,15 +224,15 @@ Known limitations of the preview:
 </td>
 <td align="center" width="25%">
 <b>Mac App</b><br>
-<i>macOS 14.6+ · 1.13.0</i><br><br>
-<a href="https://github.com/TacticSpaceTech/TacticRemote/releases/download/v1.13.0/TacticRemote-Mac-1.13.0.dmg">
+<i>macOS 14.6+ · 1.13.1</i><br><br>
+<a href="https://github.com/TacticSpaceTech/TacticRemote/releases/download/v1.13.1/TacticRemote-Mac-1.13.1.dmg">
 <img src="https://img.shields.io/badge/Download-DMG-success.svg?style=for-the-badge&logo=apple" width="160" alt="Download DMG">
 </a>
 </td>
 <td align="center" width="25%">
 <b>Windows App</b> 🟡<br>
-<i>Windows 10/11 — Preview</i><br><br>
-<a href="https://github.com/TacticSpaceTech/TacticRemote/releases/tag/v1.13.0">
+<i>Windows 10/11 — Preview · 1.13.1</i><br><br>
+<a href="https://github.com/TacticSpaceTech/TacticRemote/releases/download/v1.13.1/TacticRemote-Windows-Setup-1.13.1.exe">
 <img src="https://img.shields.io/badge/Download-EXE%20(Preview)-orange.svg?style=for-the-badge&logo=windows" width="160" alt="Download Windows Installer (Preview)">
 </a>
 </td>
