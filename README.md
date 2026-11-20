@@ -42,8 +42,8 @@ It is built for developers who want to stay close to AI coding sessions without 
 | Web App | 1.14 | Available at [app.tacticremote.com](https://app.tacticremote.com) |
 | Mac app | 1.15.0, build 35 | Signed, notarized universal app; built-in runtime |
 | Windows app | 1.15.0 Preview | Unsigned; updates install manually |
-| npm CLI | 1.14.0 | macOS and Linux, ARM64 and x64 |
-| Homebrew | 1.14.0 | Same compiled platform hosts; requires the updated tap |
+| npm CLI | 1.15.0 | macOS and Linux, ARM64 and x64 |
+| Homebrew | 1.15.0 | Same compiled platform hosts; requires the updated tap |
 
 Private preview and public sharing are separate choices. Sharing requires the explicit review/consent step and is offered only where OpenAI services are available. Review does not establish that an application is secure; do not share credentials, customer records or administrative tools.
 
@@ -137,7 +137,7 @@ Protect sessions with Face ID or Touch ID
 
 | Method | Platform | Command |
 |--------|----------|---------|
-| **npx** | Mac / Linux | `npx tacticremote@1.14.0` |
+| **npx** | Mac / Linux | `npx tacticremote@1.15.0` |
 | **Homebrew** | Mac / Linux | `brew install TacticSpaceTech/tap/tacticremote` |
 | **Mac App** | macOS 14.6+ | Menu bar GUI with one-click start and auto-update |
 | **Windows App** (Preview) | Windows 10/11 x64 | Companion app — preview release, may have issues |
@@ -149,7 +149,7 @@ Protect sessions with Face ID or Touch ID
 Install `tmux` and a supported agent CLI, complete that agent’s sign-in on the computer, then start the Mac/Linux host:
 
 ```bash
-npx tacticremote@1.14.0
+npx tacticremote@1.15.0
 ```
 
 For native Windows, use the Preview installer below. Run the Linux npm CLI inside WSL2; there is no native win32 npm platform package.
@@ -159,7 +159,7 @@ Scan the QR code with the Tactic Remote iOS app and follow the pairing prompts. 
 ### Options
 
 ```text
-npx tacticremote@1.14.0 [options]
+npx tacticremote@1.15.0 [options]
 
   -p, --port <n>      Port to listen on          (default: 8765)
   --path <dir>        Allowed base directory      (default: $HOME)
@@ -239,7 +239,7 @@ Known limitations of the preview:
 <td align="center" width="25%">
 <b>CLI</b><br>
 <i>Mac / Linux</i><br><br>
-<code>npx tacticremote@1.14.0</code>
+<code>npx tacticremote@1.15.0</code>
 </td>
 </tr>
 </table>
@@ -253,7 +253,7 @@ Known limitations of the preview:
 | **iOS** | 16.4 | iPhone or iPad |
 | **macOS** | 14.6 Sonoma | Mac app; supports Apple Silicon and Intel |
 | **Windows** | 10 or 11 (x64) | For Windows companion app (Preview) |
-| **Linux** | Any | For CLI (`npx tacticremote@1.14.0`) |
+| **Linux** | Any | For CLI (`npx tacticremote@1.15.0`) |
 | **Node.js** | See the CLI package requirements | Included in the Mac companion; no separate Node.js installation needed for the DMG |
 | **tmux** | Latest | Required by Mac/Linux backends; auto-installed by the Mac app or Homebrew |
 | **AI coding agent CLI** | Latest | Install and sign in to at least one: Claude Code, OpenAI Codex, Sourcegraph Amp, or Factory Droid |
@@ -283,7 +283,7 @@ Relay transfers end-to-end encrypted terminal and file data. Your Agent tools co
 Connect from anywhere using a secure tunnel, without opening ports on your machine:
 
 ```bash
-npx tacticremote@1.14.0 --tunnel
+npx tacticremote@1.15.0 --tunnel
 ```
 
 The server generates a `wss://` URL automatically. Use this URL in the iOS app.
@@ -295,7 +295,7 @@ The server generates a `wss://` URL automatically. Use this URL in the iOS app.
 ### API Key Authentication
 
 ```bash
-npx tacticremote@1.14.0 --api-key "your-secure-key"
+npx tacticremote@1.15.0 --api-key "your-secure-key"
 ```
 
 Then enter the same key in the iOS app.
@@ -305,7 +305,7 @@ Then enter the same key in the iOS app.
 File operations are restricted to your home directory by default. Customize the allowed base path:
 
 ```bash
-npx tacticremote@1.14.0 --path "/Users/yourname/Projects"
+npx tacticremote@1.15.0 --path "/Users/yourname/Projects"
 ```
 
 ### Tactic Relay
