@@ -17,7 +17,7 @@
 
 ---
 
-> **Tactic Remote 1.14** brings native Git write actions (stage, unstage, commit, push, pull, and branch management) to iPhone, iPad, and Tactic Remote Web, and enables Portal website discovery by default on Tactic Relay hosts. Update both the mobile app and computer host to 1.14.0.
+> **Tactic Remote 1.15** brings Live Screen to iPhone and iPad conversations. Update the mobile app and the Mac or Windows companion to view a connected computer and use its mouse and keyboard when the host allows remote control.
 
 ---
 
@@ -29,25 +29,25 @@ It is built for developers who want to stay close to AI coding sessions without 
 
 ---
 
-## What's New in 1.14
+## What's New in 1.15
 
-- Native Git workflows across iPhone, iPad, and [Tactic Remote Web](https://app.tacticremote.com): view diffs, stage and unstage, commit, push, pull, and create or switch branches (requires computer companion **1.14.0+**; **1.13.x** hosts remain read-only).
-- Portal website discovery and private previewing is now enabled by default on Tactic Relay hosts; public sharing remains an explicit, review-gated choice.
-- Clearer Git status and error handling, including stage/unstage banners in diff views, partial-push commit recovery, pull without upstream guidance, and dirty-worktree branch switch checks.
-- Improved Cloud Voice transcription reliability for short or quiet recordings.
+- Open Live Screen from a conversation to view a compatible Mac or Windows computer. Touch and keyboard input are available when the computer allows remote control.
+- Select and copy messages, commands, and output more easily across conversations, terminals, and workspaces.
+- More views follow your system text size, including conversations, sidebars, and Settings.
+- On Windows, approve Live Screen on the host. The sharing indicator includes a stop control, and mouse and keyboard access is enabled separately.
 
 | Component | Current version | Notes |
 | --- | --- | --- |
-| iPhone / iPad | 1.14.0 | Available on the App Store |
+| iPhone / iPad | 1.15.0 | Available on the App Store |
 | Web App | 1.14 | Available at [app.tacticremote.com](https://app.tacticremote.com) |
-| Mac app | 1.14.0, build 34 | Signed, notarized universal app; built-in runtime |
-| Windows app | 1.14.0 Preview | Unsigned; updates install manually |
+| Mac app | 1.15.0, build 35 | Signed, notarized universal app; built-in runtime |
+| Windows app | 1.15.0 Preview | Unsigned; updates install manually |
 | npm CLI | 1.14.0 | macOS and Linux, ARM64 and x64 |
 | Homebrew | 1.14.0 | Same compiled platform hosts; requires the updated tap |
 
 Private preview and public sharing are separate choices. Sharing requires the explicit review/consent step and is offered only where OpenAI services are available. Review does not establish that an application is secure; do not share credentials, customer records or administrative tools.
 
-[Release notes](https://github.com/TacticSpaceTech/TacticRemote/releases/tag/v1.14.0) · [Upgrade announcement](https://tacticremote.com/news/tactic-remote-1-14/) · [Portal design](https://tacticremote.com/blog/tactic-remote-1-13-in-detail/) · [iPhone localhost tutorial](https://tacticremote.com/blog/preview-localhost-on-iphone/)
+[Release notes](https://github.com/TacticSpaceTech/TacticRemote/releases/tag/v1.15.0) · [Portal design](https://tacticremote.com/blog/tactic-remote-1-13-in-detail/) · [iPhone localhost tutorial](https://tacticremote.com/blog/preview-localhost-on-iphone/)
 
 
 ---
@@ -96,7 +96,7 @@ Create, switch, and manage multiple Agent sessions
 Browse your computer's file system and select project directories from iOS
 
 ### **Local & Remote Access**
-Connect on your local network, or use Tactic Relay with the current Mac companion or Windows 1.14 Preview for remote access. Advanced tunnel connections remain available.
+Connect on your local network, or use Tactic Relay with the current Mac companion or Windows 1.15 Preview for remote access. Advanced tunnel connections remain available.
 
 ### **Push Notifications**
 Get notified when an agent completes tasks or sends hook events
@@ -173,7 +173,7 @@ npx tacticremote@1.14.0 [options]
 
 If you prefer a graphical interface:
 
-1. **Download** the 1.14.0 DMG from [Releases](https://github.com/TacticSpaceTech/TacticRemote/releases/tag/v1.14.0) (macOS 14.6 or later)
+1. **Download** the 1.15.0 DMG from [Releases](https://github.com/TacticSpaceTech/TacticRemote/releases/tag/v1.15.0) (macOS 14.6 or later)
 2. **Install** by opening the DMG and dragging **Tactic Remote** to Applications
 3. **Launch** from Applications; a menu bar icon will appear
 4. **Start Server** from the menu bar app
@@ -196,7 +196,7 @@ The Mac app also provides:
 
 > 🟡 **Preview release.** The Windows companion is published as a preview. Most flows work, but expect rough edges compared to the Mac app and iOS app. We recommend macOS users continue using the Mac companion; we welcome bug reports from Windows users.
 
-1. **Download** the installer from [Releases](https://github.com/TacticSpaceTech/TacticRemote/releases/tag/v1.14.0): `TacticRemote-Windows-Setup-1.14.0.exe`
+1. **Download** the installer from [Releases](https://github.com/TacticSpaceTech/TacticRemote/releases/tag/v1.15.0): `TacticRemote-Windows-Setup-1.15.0.exe`
 2. **Install** by running the installer (Windows 10 or 11, x64)
 3. **Launch** Tactic Remote from the Start menu
 4. **Start Server** from the app window
@@ -224,15 +224,15 @@ Known limitations of the preview:
 </td>
 <td align="center" width="25%">
 <b>Mac App</b><br>
-<i>macOS 14.6+ · 1.14.0</i><br><br>
-<a href="https://github.com/TacticSpaceTech/TacticRemote/releases/download/v1.14.0/TacticRemote-Mac-1.14.0.dmg">
+<i>macOS 14.6+ · 1.15.0</i><br><br>
+<a href="https://github.com/TacticSpaceTech/TacticRemote/releases/download/v1.15.0/TacticRemote-Mac-1.15.0.dmg">
 <img src="https://img.shields.io/badge/Download-DMG-success.svg?style=for-the-badge&logo=apple" width="160" alt="Download DMG">
 </a>
 </td>
 <td align="center" width="25%">
 <b>Windows App</b> 🟡<br>
-<i>Windows 10/11 — Preview · 1.14.0</i><br><br>
-<a href="https://github.com/TacticSpaceTech/TacticRemote/releases/download/v1.14.0/TacticRemote-Windows-Setup-1.14.0.exe">
+<i>Windows 10/11 — Preview · 1.15.0</i><br><br>
+<a href="https://github.com/TacticSpaceTech/TacticRemote/releases/download/v1.15.0/TacticRemote-Windows-Setup-1.15.0.exe">
 <img src="https://img.shields.io/badge/Download-EXE%20(Preview)-orange.svg?style=for-the-badge&logo=windows" width="160" alt="Download Windows Installer (Preview)">
 </a>
 </td>
@@ -274,7 +274,7 @@ Ensure your iOS device and computer are on the same Wi-Fi network.
 
 ### Tactic Relay
 
-Use the current Mac companion or Windows 1.14 Preview to bind your computer to your Tactic account and enable Relay. On iPhone or iPad, sign in to the same account, select the computer, and follow the connection prompts. Keep the host computer running and online.
+Use the current Mac companion or Windows 1.15 Preview to bind your computer to your Tactic account and enable Relay. On iPhone or iPad, sign in to the same account, select the computer, and follow the connection prompts. Keep the host computer running and online.
 
 Relay transfers end-to-end encrypted terminal and file data. Your Agent tools continue to use the credentials configured on the host computer; signing in to Tactic does not copy Agent credentials between computers.
 
