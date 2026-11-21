@@ -38,7 +38,7 @@ It is built for developers who want to stay close to AI coding sessions without 
 
 | Component | Current version | Notes |
 | --- | --- | --- |
-| iPhone / iPad | 1.15.0 | Available on the App Store |
+| iPhone / iPad | 1.15.0 | [App Store](https://apps.apple.com/app/id6758008464). Availability may vary by storefront. |
 | Web App | 1.14 | Available at [app.tacticremote.com](https://app.tacticremote.com) |
 | Mac app | 1.15.0, build 35 | Signed, notarized universal app; built-in runtime |
 | Windows app | 1.15.0 Preview | Unsigned; updates install manually |
